@@ -1,0 +1,33 @@
+# Copyright 2024 Hauki Tech sp. z o.o.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on:
+  - push
+
+env:
+  terraform_version: 1.8.1
+  terragrunt_version: 0.57.5
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gruntwork-io/terragrunt-action@v2
+        with:
+          tf_version: ${{ env.terraform_version }}
+          tg_version: ${{ env.terragrunt_version }}
+          tg_dir: ${{ github.workspace }}
+          tg_command: 'hclfmt --terragrunt-check --terragrunt-diff'
+      - run: terraform fmt -check --recursive -diff .
