@@ -1,7 +1,3 @@
- # Atlantis CI Permissions
-
- This module creates an administrator role for Atlantis CI to manage infrastructure on a particular account.
-
 ## Requirements
 
 | Name | Version |

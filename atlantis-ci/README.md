@@ -1,7 +1,3 @@
- # Atlantis CI
-
- This Terraform module sets up Atlantis CI running as an ECS service on Fargate.
-
 ## Requirements
 
 | Name | Version |
