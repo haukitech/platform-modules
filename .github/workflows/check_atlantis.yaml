@@ -1,44 +1,18 @@
-# Copyright 2024 Hauki Tech sp. z o.o.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-name: Test generate_atlantis_config
+name: Terraform docs
 
 on:
-  - push
+  pull_request:
 
 jobs:
-  test_generate_atlantis_config:
+  check_docs_up_to_date:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
-    - name: Install dependencies and run script
-      run: |
-        python -m pip install --upgrade pip
-
-        python -m pip install pyyaml
-        
-        if git diff --exit-code -- atlantis.yaml; then
-          echo "No changes detected in atlantis.yaml."
-        else
-          echo "Changes detected in atlantis.yaml!"
-          exit 1
-        fi
+      - uses: actions/checkout@v4
+      - name: Check Docs for all modules
+        uses: terraform-docs/gh-actions@v1.2.0
+        with:
+          find-dir: .
+          config-file: .terraform-docs.yml
+          output-method: ""
+          template: ""
+          fail-on-diff: true
