@@ -1,11 +1,10 @@
+/**
+* # Atlantis CI
+*
+* This Terraform module sets up Atlantis CI running as an ECS service on Fargate.
+*/
 # Copyright 2024 Hauki Tech sp. z o.o.
 # SPDX-License-Identifier: Apache-2.0
-
-/**
-*  # Atlantis CI
-*
-*  This Terraform module sets up Atlantis CI running as an ECS service on Fargate.
-*/
 terraform {
   backend "s3" {}
 
