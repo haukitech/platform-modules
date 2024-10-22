@@ -14,7 +14,6 @@ jobs:
       - name: Check Docs for all modules
         uses: terraform-docs/gh-actions@v1.2.0
         with:
-          find-dir: .
           config-file: .terraform-docs.yml
           output-method: ""
           template: ""
