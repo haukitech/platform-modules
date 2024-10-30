@@ -16,6 +16,4 @@ jobs:
         uses: terraform-linters/setup-tflint@v4
         with:
           tflint_wrapper: true
-      - name: Run Tflint
-        id: tflint
-        run: tflint -f compact
+      - run: tflint -f compact
