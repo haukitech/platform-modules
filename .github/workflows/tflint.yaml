@@ -18,5 +18,4 @@ jobs:
           tflint_wrapper: true
       - name: Run Tflint
         id: tflint
-        run: |
-          tflint -f compact || echo "Tflint found problems"
+        run: tflint -f compact
