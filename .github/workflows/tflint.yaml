@@ -1,0 +1,21 @@
+# Copyright 2024 Hauki Tech sp. z o.o.
+# SPDX-License-Identifier: Apache-2.0
+
+name: Tflint
+
+on:
+  pull_request:
+
+jobs:
+  check_errors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check errors in configuration
+        uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_wrapper: true
+      - run: tflint -f compact
+      - run: echo ${{ steps.tflint.outputs.stdout }}
+      - run: echo ${{ steps.tflint.outputs.stderr }}
+      - run: echo ${{ steps.tflint.outputs.exitcode }}
