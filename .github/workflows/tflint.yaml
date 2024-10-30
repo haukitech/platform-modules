@@ -4,7 +4,7 @@
 name: Tflint
 
 on:
-  - push
+  pull_request:
 
 jobs:
   check_errors:
@@ -20,7 +20,3 @@ jobs:
         id: tflint
         run: |
           tflint -f compact || echo "Tflint found problems"
-
-      - name: Display Tflint Exit Code
-        run:
-          echo "Tflint exit code: $?"
