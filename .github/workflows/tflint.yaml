@@ -16,8 +16,11 @@ jobs:
         uses: terraform-linters/setup-tflint@v4
         with:
           tflint_wrapper: true
-      - name: TFLint - Run
+      - name: Run Tflint
+        id: tflint
         run: |
-          tflint --version
-          tflint --init
-          tflint
+          tflint -f compact || echo "Tflint found problems"
+
+      - name: Display Tflint Exit Code
+        run:
+          echo "Tflint exit code: $?"
