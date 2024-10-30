@@ -4,7 +4,7 @@
 name: Tflint
 
 on:
-  pull_request:
+  - push
 
 jobs:
   check_errors:
