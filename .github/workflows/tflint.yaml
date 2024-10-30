@@ -11,11 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: terraform-linters/setup-tflint@v4
       - name: Check errors in configuration
-        uses: terraform-linters/setup-tflint@v4
+        uses: terraform-linters/tflint-load-config-action@v1
         with:
-          tflint_wrapper: true
+         source-repo: ./
       - run: tflint -f compact
-      - run: echo ${{ steps.tflint.outputs.stdout }}
-      - run: echo ${{ steps.tflint.outputs.stderr }}
-      - run: echo ${{ steps.tflint.outputs.exitcode }}
