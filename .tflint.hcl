@@ -5,9 +5,9 @@ tflint {
 }
 
 config {
-  format = "compact"
-  plugin_dir = "~/.tflint.d/plugins"
-  force = false
+  format              = "compact"
+  plugin_dir          = "~/.tflint.d/plugins"
+  force               = false
   disabled_by_default = false
 }
 
