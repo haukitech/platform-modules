@@ -14,7 +14,5 @@ jobs:
       - name: TFLint - Setup
         id: tflint
         uses: terraform-linters/setup-tflint@v4
-        with:
-          tflint_wrapper: true
       - run: tflint --init
       - run: tflint --recursive
