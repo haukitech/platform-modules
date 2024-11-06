@@ -1,6 +1,6 @@
 # Copyright 2024 Hauki Tech sp. z o.o.
 # SPDX-License-Identifier: Apache-2.0
-/*tflint {
+tflint {
   required_version = ">= 0.50"
 }
 
@@ -9,7 +9,7 @@ config {
   plugin_dir = "~/.tflint.d/plugins"
   force = false
   disabled_by_default = false
-}*/
+}
 
 plugin "aws" {
   enabled = true
