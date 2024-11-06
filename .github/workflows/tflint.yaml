@@ -1,0 +1,18 @@
+# Copyright 2024 Hauki Tech sp. z o.o.
+# SPDX-License-Identifier: Apache-2.0
+
+name: Tflint
+
+on:
+  pull_request:
+
+jobs:
+  check_errors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: TFLint - Setup
+        id: tflint
+        uses: terraform-linters/setup-tflint@v4
+      - run: tflint --init
+      - run: tflint --recursive
