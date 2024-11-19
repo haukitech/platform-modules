@@ -19,11 +19,6 @@ terraform {
       source  = "carlpett/sops"
       version = "1.0.0"
     }
-
-    terraform = {
-      source  = "hashicorp/template"
-      version = "~> 2"
-    }
   }
 }
 

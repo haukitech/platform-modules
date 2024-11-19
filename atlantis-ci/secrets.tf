@@ -41,3 +41,11 @@ resource "random_password" "basic_auth_username_suffix" {
   length  = 5
   special = false
 }
+
+terraform {
+  required_providers {
+    template = {
+      version = "~> 2"
+    }
+  }
+}
