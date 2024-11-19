@@ -44,8 +44,9 @@ resource "random_password" "basic_auth_username_suffix" {
 
 terraform {
   required_providers {
-    template = {
-      version = "~> 2"
+    random = {
+      source = "hashicorp/random"
+      version = "~> 3.6"
     }
   }
 }
