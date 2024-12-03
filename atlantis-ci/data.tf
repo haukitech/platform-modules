@@ -13,12 +13,3 @@ data "aws_subnet" "private" {
     values = [each.value]
   }
 }
-
-data "aws_subnet" "public" {
-  for_each = toset(local.public_subnet_ids)
-
-  filter {
-    name   = "subnet-id"
-    values = [each.value]
-  }
-}

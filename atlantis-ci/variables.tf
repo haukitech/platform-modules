@@ -26,11 +26,6 @@ variable "allowed_repositories" {
   description = "List of repositories using Atlantis"
 }
 
-variable "github_app_id" {
-  type        = number
-  description = "ID used for authentication and communication between Atlantis and GitHub"
-}
-
 variable "atlantis_image_tag" {
   type        = string
   description = "Atlantis version"
@@ -51,12 +46,17 @@ variable "service_memory_units" {
   description = "Defines the amount of memory allocated for the service"
 }
 
-variable "max_parallel_jobs" {
-  type        = number
-  description = "Number of jobs to run at the same time"
-}
-
 variable "local_atlantis_role_arns" {
   type        = list(string)
   description = "Used by the module to generate the trust policy"
+}
+
+variable "github_app_id" {
+  type        = number
+  description = "ID used for authentication and communication between Atlantis and GitHub"
+}
+
+variable "max_parallel_jobs" {
+  type        = number
+  description = "Number of jobs to run at the same time"
 }

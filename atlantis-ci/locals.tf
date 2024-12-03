@@ -9,5 +9,4 @@ locals {
   server_side_config = sensitive(jsonencode(yamldecode(file("server_side_config.yaml"))))
 
   private_subnet_ids = tolist(data.terraform_remote_state.vpc.outputs.private_subnets)
-  public_subnet_ids  = tolist(data.terraform_remote_state.vpc.outputs.public_subnets)
 }

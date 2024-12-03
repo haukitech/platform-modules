@@ -41,3 +41,12 @@ resource "random_password" "basic_auth_username_suffix" {
   length  = 5
   special = false
 }
+
+terraform {
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+  }
+}
