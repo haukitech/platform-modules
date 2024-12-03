@@ -9,6 +9,7 @@
 *          NS and DS records have to be managed there independently.
 */
 terraform {
+  required_version = ">= 1.0.0"
   backend "s3" {}
 
   required_providers {
