@@ -50,3 +50,13 @@ variable "local_atlantis_role_arns" {
   type        = list(string)
   description = "Used by the module to generate the trust policy"
 }
+
+variable "github_app_id" {
+  type        = number
+  description = "ID used for authentication and communication between Atlantis and GitHub"
+}
+
+variable "max_parallel_jobs" {
+  type        = number
+  description = "Number of jobs to run at the same time"
+}

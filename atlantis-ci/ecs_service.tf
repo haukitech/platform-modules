@@ -25,7 +25,7 @@ module "atlantis" {
       },
       {
         name  = "ATLANTIS_GH_APP_ID"
-        value = "var.github_app_id"
+        value = var.github_app_id
       },
       {
         name  = "ATLANTIS_WEB_BASIC_AUTH"
@@ -33,7 +33,7 @@ module "atlantis" {
       },
       {
         name  = "ATLANTIS_PARALLEL_POOL_SIZE"
-        value = "var.max_parallel_jobs"
+        value = var.max_parallel_jobs
       },
       {
         name  = "ATLANTIS_DEFAULT_TF_VERSION"
