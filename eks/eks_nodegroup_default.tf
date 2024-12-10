@@ -6,7 +6,7 @@ module "ng_default_1" {
   version  = ">= 1.0.0"
   for_each = data.terraform_remote_state.default-vpc.outputs.new_private_subnets
 
-  name            = var.resource_prefix +"-ng-default-1-" +each.key
+  name            = var.resource_prefix + "-ng-default-1-" + each.key
   use_name_prefix = false
 
   cluster_name    = module.eks-main.cluster_name
@@ -23,10 +23,10 @@ module "ng_default_1" {
   max_size     = var.default_node_group_max_size
   desired_size = var.default_node_group_min_size
 
-  iam_role_name            = var.resource_prefix +"-ng-default-1-role-" +each.key
+  iam_role_name            = var.resource_prefix + "-ng-default-1-role-" + each.key
   iam_role_use_name_prefix = false
 
-  launch_template_name            = var.resource_prefix +"-ng-default-1-" +each.key
+  launch_template_name            = var.resource_prefix + "-ng-default-1-" + each.key
   launch_template_use_name_prefix = false
 
   instance_types = var.main_node_group_instance_classes
