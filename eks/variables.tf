@@ -1,11 +1,6 @@
 # Copyright 2024 Hauki Tech sp. z o.o.
 # SPDX-License-Identifier: Apache-2.0
 
-variable "default_tags" {
-  type        = map(string)
-  description = "Default resource tags injected by Terragrunt"
-}
-
 variable "aws_region" {
   type        = string
   description = "AWS region"

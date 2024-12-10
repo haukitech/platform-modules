@@ -3,7 +3,7 @@
 
 module "ng_default_1" {
   source = "terraform-aws-modules/eks/aws//modules/eks-managed-node-group"
-
+  version = ">= 1.0.0"
   for_each = data.terraform_remote_state.default-vpc.outputs.new_private_subnets
 
   name            = var.resource_prefix-ng-default-1-each.key
