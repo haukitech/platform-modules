@@ -20,8 +20,3 @@ variable "state_sku_key" {
   type        = string
   description = "Terraform state SKU key"
 }
-
-variable "policy_json" {
-  type        = string
-  description = "JSON-encoded policy that will be attached to the IRSA IAM role"
-}
