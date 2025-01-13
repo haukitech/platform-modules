@@ -4,10 +4,10 @@
 * This Terraform module creates necessary AWS resources for the public hosted zone.
 */
 terraform {
+  required_version = ">= 1.0.0"
   backend "s3" {}
 
   required_providers {
-    required_version = ">= 1.0.0"
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.35"
