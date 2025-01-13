@@ -41,7 +41,6 @@ variable "main_node_group_max_size" {
   description = "Specifies the maximum number of instances that should be running in a node group"
 }
 
-
 variable "default_node_group_instance_classes" {
   type        = list(string)
   description = "List of the main node group instance classes"
@@ -75,11 +74,6 @@ variable "aws_managed_policy_eks_cluster_admin" {
 variable "aws_managed_policy_eks_view" {
   type        = string
   description = "ARN of the EKS View managed policy"
-}
-
-variable "aws_account_id" {
-  type        = string
-  description = "AWS account"
 }
 
 variable "additional_cluster_nodegroups" {

@@ -27,15 +27,13 @@
 | <a name="module_eks-main"></a> [eks-main](#module\_eks-main) | terraform-aws-modules/eks/aws | ~> 20.8 |
 | <a name="module_eks_ebs_addon_iam_role"></a> [eks\_ebs\_addon\_iam\_role](#module\_eks\_ebs\_addon\_iam\_role) | terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc | 5.34.0 |
 | <a name="module_eks_efs_addon_iam_role"></a> [eks\_efs\_addon\_iam\_role](#module\_eks\_efs\_addon\_iam\_role) | terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc | 5.34.0 |
-| <a name="module_ng_default_1"></a> [ng\_default\_1](#module\_ng\_default\_1) | terraform-aws-modules/eks/aws//modules/eks-managed-node-group | n/a |
+| <a name="module_ng_default_1"></a> [ng\_default\_1](#module\_ng\_default\_1) | terraform-aws-modules/eks/aws//modules/eks-managed-node-group | >= 1.0.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
 | [aws_iam_policy.cluster_autoscaler](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
-| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
-| [aws_subnets.private](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnets) | data source |
 | [terraform_remote_state.default-vpc](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.hauki-access](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
@@ -44,14 +42,12 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_additional_cluster_nodegroups"></a> [additional\_cluster\_nodegroups](#input\_additional\_cluster\_nodegroups) | Specifies additional managed node groups for the EKS | `map(any)` | `{}` | no |
-| <a name="input_aws_account_id"></a> [aws\_account\_id](#input\_aws\_account\_id) | AWS account | `string` | n/a | yes |
 | <a name="input_aws_managed_policy_eks_cluster_admin"></a> [aws\_managed\_policy\_eks\_cluster\_admin](#input\_aws\_managed\_policy\_eks\_cluster\_admin) | ARN of the EKS Cluster Admin managed policy | `string` | n/a | yes |
 | <a name="input_aws_managed_policy_eks_view"></a> [aws\_managed\_policy\_eks\_view](#input\_aws\_managed\_policy\_eks\_view) | ARN of the EKS View managed policy | `string` | n/a | yes |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS region | `string` | n/a | yes |
 | <a name="input_default_node_group_instance_classes"></a> [default\_node\_group\_instance\_classes](#input\_default\_node\_group\_instance\_classes) | List of the main node group instance classes | `list(string)` | n/a | yes |
 | <a name="input_default_node_group_max_size"></a> [default\_node\_group\_max\_size](#input\_default\_node\_group\_max\_size) | Specifies the maximum number of instances that should be running in a node group | `number` | n/a | yes |
 | <a name="input_default_node_group_min_size"></a> [default\_node\_group\_min\_size](#input\_default\_node\_group\_min\_size) | Specifies the minimum number of instances that should be running in a node group | `number` | n/a | yes |
-| <a name="input_default_tags"></a> [default\_tags](#input\_default\_tags) | Default resource tags injected by Terragrunt | `map(string)` | n/a | yes |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | Version of the Kubernetes cluster | `string` | n/a | yes |
 | <a name="input_firefighters_iam_role_arn"></a> [firefighters\_iam\_role\_arn](#input\_firefighters\_iam\_role\_arn) | ARN of the provisioned IAM role for the Firefighters group in the account | `string` | n/a | yes |
 | <a name="input_main_node_group_instance_classes"></a> [main\_node\_group\_instance\_classes](#input\_main\_node\_group\_instance\_classes) | Contains a list of instance types to use | `list(string)` | n/a | yes |
