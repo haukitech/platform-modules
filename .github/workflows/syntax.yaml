@@ -5,14 +5,15 @@ on:
   - push
 
 env:
-  terraform_version: 1.8.1
-  terragrunt_version: 0.57.5
+  terraform_version: 1.10
+  terragrunt_version: 0.72
 
 jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
       - uses: gruntwork-io/terragrunt-action@v2
         with:
           tf_version: ${{ env.terraform_version }}
