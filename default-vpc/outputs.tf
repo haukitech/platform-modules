@@ -1,6 +1,5 @@
 # Copyright 2024 Hauki Tech sp. z o.o.
 # SPDX-License-Identifier: Apache-2.0
-#test
 
 output "vpc_id" {
   value       = aws_vpc.default.id
