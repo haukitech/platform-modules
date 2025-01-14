@@ -56,7 +56,7 @@ module "eks-main" {
 
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
-    instance_types           = var.main_node_group_instance_classes
+    instance_types           = var.default_node_group_instance_classes
     use_name_prefix          = false
     iam_role_use_name_prefix = false
     capacity_type            = "ON_DEMAND"

@@ -29,7 +29,7 @@ module "ng_default_1" {
   launch_template_name            = var.resource_prefix + "-ng-default-1-" + each.key
   launch_template_use_name_prefix = false
 
-  instance_types = var.main_node_group_instance_classes
+  instance_types = var.default_node_group_instance_classes
   capacity_type  = "ON_DEMAND"
 
   update_config = {
