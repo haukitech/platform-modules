@@ -50,9 +50,6 @@
 | <a name="input_default_node_group_min_size"></a> [default\_node\_group\_min\_size](#input\_default\_node\_group\_min\_size) | Specifies the minimum number of instances that should be running in a node group | `number` | n/a | yes |
 | <a name="input_eks_version"></a> [eks\_version](#input\_eks\_version) | Version of the Kubernetes cluster | `string` | n/a | yes |
 | <a name="input_firefighters_iam_role_arn"></a> [firefighters\_iam\_role\_arn](#input\_firefighters\_iam\_role\_arn) | ARN of the provisioned IAM role for the Firefighters group in the account | `string` | n/a | yes |
-| <a name="input_main_node_group_instance_classes"></a> [main\_node\_group\_instance\_classes](#input\_main\_node\_group\_instance\_classes) | Contains a list of instance types to use | `list(string)` | n/a | yes |
-| <a name="input_main_node_group_max_size"></a> [main\_node\_group\_max\_size](#input\_main\_node\_group\_max\_size) | Specifies the maximum number of instances that should be running in a node group | `number` | n/a | yes |
-| <a name="input_main_node_group_min_size"></a> [main\_node\_group\_min\_size](#input\_main\_node\_group\_min\_size) | Specifies the minimum number of instances that should be running in a node group | `number` | n/a | yes |
 | <a name="input_readonly_user_iam_role_arn"></a> [readonly\_user\_iam\_role\_arn](#input\_readonly\_user\_iam\_role\_arn) | ARN of the provisioned IAM role for the Read-Only group in the account | `string` | n/a | yes |
 | <a name="input_resource_prefix"></a> [resource\_prefix](#input\_resource\_prefix) | Default resource prefix injected by Terragrunt | `string` | n/a | yes |
 | <a name="input_state_bucket"></a> [state\_bucket](#input\_state\_bucket) | Terraform state S3 bucket name | `string` | n/a | yes |

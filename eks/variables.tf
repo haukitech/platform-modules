@@ -26,17 +26,17 @@ variable "eks_version" {
   description = "Version of the Kubernetes cluster"
 }
 
-variable "main_node_group_instance_classes" {
+variable "default_node_group_instance_classes" {
   type        = list(string)
   description = "Contains a list of instance types to use"
 }
 
-variable "main_node_group_min_size" {
+variable "default_node_group_min_size" {
   type        = number
   description = "Specifies the minimum number of instances that should be running in a node group"
 }
 
-variable "main_node_group_max_size" {
+variable "default_node_group_max_size" {
   type        = number
   description = "Specifies the maximum number of instances that should be running in a node group"
 }
