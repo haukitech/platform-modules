@@ -23,7 +23,7 @@ in this repository https://github.com/kamu-data/kamu-cluster.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ng_default_1"></a> [ng\_default\_1](#module\_ng\_default\_1) | terraform-aws-modules/eks/aws//modules/eks-managed-node-group | n/a |
+| <a name="module_ng_default_1"></a> [ng\_default\_1](#module\_ng\_default\_1) | terraform-aws-modules/eks/aws//modules/eks-managed-node-group | >= 1.0.0 |
 
 ## Resources
 
@@ -36,7 +36,6 @@ in this repository https://github.com/kamu-data/kamu-cluster.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS region | `string` | n/a | yes |
-| <a name="input_policy_json"></a> [policy\_json](#input\_policy\_json) | JSON-encoded policy that will be attached to the IRSA IAM role | `string` | n/a | yes |
 | <a name="input_resource_prefix"></a> [resource\_prefix](#input\_resource\_prefix) | Resource prefix | `string` | n/a | yes |
 | <a name="input_state_bucket"></a> [state\_bucket](#input\_state\_bucket) | Terraform state S3 bucket name | `string` | n/a | yes |
 | <a name="input_state_sku_key"></a> [state\_sku\_key](#input\_state\_sku\_key) | Terraform state SKU key | `string` | n/a | yes |
