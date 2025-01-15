@@ -15,9 +15,7 @@ in this repository https://github.com/kamu-data/kamu-cluster.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
+No providers.
 
 ## Modules
 
@@ -27,18 +25,13 @@ in this repository https://github.com/kamu-data/kamu-cluster.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [terraform_remote_state.eks](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+No resources.
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS region | `string` | n/a | yes |
 | <a name="input_resource_prefix"></a> [resource\_prefix](#input\_resource\_prefix) | Resource prefix | `string` | n/a | yes |
-| <a name="input_state_bucket"></a> [state\_bucket](#input\_state\_bucket) | Terraform state S3 bucket name | `string` | n/a | yes |
-| <a name="input_state_sku_key"></a> [state\_sku\_key](#input\_state\_sku\_key) | Terraform state SKU key | `string` | n/a | yes |
 
 ## Outputs
 
